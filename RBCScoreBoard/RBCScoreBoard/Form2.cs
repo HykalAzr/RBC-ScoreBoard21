@@ -36,22 +36,13 @@ namespace RBCScoreBoard
             DateTime now = DateTime.Now;
             lblDateTime.Text = now.ToString();
 
-            if (scoreBar.Maximum < Form1.totalScore)
-            {
-                
-            }
-            else
-            {
-                scoreBar.Value = Form1.totalScore;
-            }
-               
-                     
-       
-                string minSec = string.Format("{0} : {1:00}", Form1.displayCounter / 60, Form1.displayCounter % 60);
-                lblMinutes.Text = minSec;
-                TotScoreDisp.Text = Form1.totalScore.ToString();
-                ArrowShotDisp.Text = Form1.totalArrowShot.ToString();
-                statusDisp.Text = Form1.statusDispText;
+            string minSec = string.Format("{0} : {1:00}", Form1.displayCounter / 60, Form1.displayCounter % 60);
+            lblMinutes.Text = minSec;
+            TotScoreDisp.Text = Form1.totalScore.ToString();
+            scoreBar.Value = Form1.totalScore;
+            laghoriShotDisp.Text = Form1.totalLaghoriShot.ToString();
+            laghoriPickUpDisp.Text = Form1.totalLaghoriPickUp.ToString();
+            statusDisp.Text = Form1.statusDispText;
         }
     }
 }
